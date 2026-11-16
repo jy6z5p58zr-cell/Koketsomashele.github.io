@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Koketso Mashele</title>
+<meta name="description" content="Painter, director, producer and designer in Johannesburg. Studio Solarii, 7 Pieces and Masungulo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F1ECFA;--ink:#261A55;--gold:#E0A21F;--rose:#E8527A;--sand:#F7E3AE;--line:rgba(38,26,85,.18)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:56px}
+body{font-family:"Bricolage Grotesque",system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;font-size:1.05rem;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--rose);outline-offset:3px}
+.hand{font-family:Caveat,"Comic Sans MS",cursive;font-weight:600}
+nav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:2px solid var(--ink);display:flex;gap:1.2rem;align-items:center;padding:.7rem 1rem;overflow-x:auto;white-space:nowrap}
+nav b{margin-right:auto;font-weight:800}
+nav a{text-decoration:none;font-weight:700;font-size:.95rem}
+nav a:hover{color:var(--rose)}
+section{position:relative;padding:4.5rem 1.25rem}
+.wrap{max-width:68rem;margin:0 auto;position:relative}
+h1{font-size:clamp(3rem,13vw,8.5rem);line-height:.88;font-weight:800;letter-spacing:-.04em}
+h2{font-size:clamp(2rem,6vw,3.4rem);line-height:1;font-weight:800;letter-spacing:-.03em;margin-bottom:1rem}
+p{max-width:38rem}
+.lead{font-size:1.25rem;margin-top:1.6rem}
+.note{font-size:1.7rem;color:var(--rose);display:inline-block;transform:rotate(-2deg);margin-top:1rem}
+.btn{display:inline-block;background:var(--ink);color:var(--paper);padding:.7rem 1.2rem;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid var(--ink);transition:background .15s,color .15s}
+.btn:hover{background:var(--gold);color:var(--ink)}
+.dark{background:var(--ink);color:var(--paper)}
+.dark .btn{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+.dark .btn:hover{background:var(--paper);border-color:var(--paper)}
+.gold{background:var(--sand)}
+.grid{display:grid;gap:1.25rem;margin-top:2rem;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr))}
+.card{border:2px solid var(--ink);border-radius:1.1rem;background:var(--paper);color:var(--ink);overflow:hidden;display:flex;flex-direction:column}
+.card .body{padding:1rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
+.card .body .btn{margin-top:auto;text-align:center}
+.card h3{font-size:1.2rem}
+.price{font-weight:800;font-size:1.15rem}
+.ph{aspect-ratio:4/3;display:grid;place-items:center;text-align:center;font-size:1.5rem;color:var(--ink);background:repeating-linear-gradient(135deg,var(--sand) 0 14px,#F3D790 14px 28px);border-bottom:2px solid var(--ink)}
+.ph.v{aspect-ratio:9/16}.ph.w{aspect-ratio:16/9}
+.card img{width:100%;display:block;border-bottom:2px solid var(--ink)}
+.row{display:flex;gap:1.25rem;overflow-x:auto;padding:.5rem 0 1rem;margin-top:1.5rem;scroll-snap-type:x mandatory}
+.row .card{flex:0 0 11.5rem;scroll-snap-align:start}
+.post{border-top:2px solid var(--ink);padding:1rem 0;max-width:40rem}
+.post time{font-weight:700;color:var(--rose)}
+.opts{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.5rem}
+.d{position:absolute;width:5rem;height:5rem;fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
+.d.s{width:3rem;height:3rem}.d.l{width:9rem;height:2rem}
+.gold-c{color:var(--gold)}.rose-c{color:var(--rose)}
+footer{padding:2rem 1.25rem;border-top:2px solid var(--ink);display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between}
+@media (max-width:40rem){section{padding:3.5rem 1.1rem}.d.hide{display:none}}
+</style>
+</head>
+<body>
+
+<!-- DOODLE LIBRARY: swap these for your own drawings (see notes in the reply) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="star" viewBox="0 0 100 100"><path d="M50 5C54 35 65 46 95 50C65 54 54 65 50 95C46 65 35 54 5 50C35 46 46 35 50 5Z"/></symbol>
+  <symbol id="squig" viewBox="0 0 100 20"><path d="M3 12Q15 -2 27 12T51 12T75 12T97 12"/></symbol>
+  <symbol id="seven" viewBox="0 0 100 100"><path d="M18 16H82L42 90M36 54H70"/></symbol>
+  <symbol id="orbit" viewBox="0 0 100 100"><ellipse cx="50" cy="50" rx="44" ry="16" transform="rotate(-25 50 50)"/><circle cx="50" cy="50" r="9"/><circle cx="86" cy="32" r="3"/></symbol>
+</svg>
+
+<nav aria-label="Main">
+  <b>Koketso Mashele</b>
+  <a href="#solarii">Studio Solarii</a>
+  <a href="#pieces">7 Pieces</a>
+  <a href="#masungulo">Masungulo</a>
+  <a href="#shorts">Shorts</a>
+  <a href="#book">Book</a>
+</nav>
+
+<header>
+<section id="top">
+  <svg class="d gold-c" style="top:2rem;right:8%" aria-hidden="true"><use href="#star"/></svg>
+  <svg class="d s rose-c hide" style="top:9rem;right:26%" aria-hidden="true"><use href="#star"/></svg>
+  <svg class="d l rose-c hide" style="bottom:2.5rem;right:10%" aria-hidden="true"><use href="#squig"/></svg>
+  <svg class="d" style="bottom:5rem;left:2%;width:6rem;height:6rem" aria-hidden="true"><use href="#seven"/></svg>
+  <div class="wrap">
+    <h1>Koketso<br>Mashele</h1>
+    <p class="lead">Painter, director, producer, fashion designer and makeup artist. I also have an astrophysics degree, so yes, I’m basically a mathematician.</p>
+    <p class="note hand">(no, I won’t tell you your horoscope)</p>
+    <p style="margin-top:1.8rem"><a class="btn" href="#book">Book me</a></p>
+  </div>
+</section>
+</header>
+
+<main>
+<section id="solarii" class="dark">
+  <svg class="d gold-c hide" style="top:2rem;right:6%" aria-hidden="true"><use href="#orbit"/></svg>
+  <div class="wrap">
+    <h2>Studio Solarii</h2>
+    <p>My creative production house in Johannesburg. Music videos, treatments, and The Clique, the music interview show I direct and run.</p>
+    <div class="grid">
+      <!-- Replace each .ph with a video: <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="..." allowfullscreen style="width:100%;aspect-ratio:16/9;border:0"></iframe> -->
+      <article class="card"><div class="ph w hand">Snippet 1</div><div class="body"><h3>The Clique</h3><p>A clip from the show. Add a one-line description.</p></div></article>
+      <article class="card"><div class="ph w hand">Snippet 2</div><div class="body"><h3>Music video</h3><p>A clip from a video. Add a one-line description.</p></div></article>
+      <article class="card"><div class="ph w hand">Snippet 3</div><div class="body"><h3>Treatment</h3><p>A page from a director’s treatment.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="pieces">
+  <svg class="d rose-c hide" style="top:2rem;right:8%" aria-hidden="true"><use href="#seven"/></svg>
+  <div class="wrap">
+    <h2>7 Pieces</h2>
+    <p>My art, as prints and stickers. Tap Buy now to chat with me on WhatsApp. You pay by EFT and I post your order once it clears.</p>
+    <div class="grid" id="pieces-grid"></div>
+  </div>
+</section>
+
+<section id="masungulo" class="gold">
+  <svg class="d hide" style="top:2rem;right:6%" aria-hidden="true"><use href="#star"/></svg>
+  <svg class="d s rose-c hide" style="top:7rem;right:16%" aria-hidden="true"><use href="#star"/></svg>
+  <div class="wrap">
+    <h2>Masungulo</h2>
+    <p>My wearable-art label. The first collection, The Beginning, launches in December 2027. Early pieces from my paintings are here now.</p>
+    <div class="grid" id="mas-grid"></div>
+  </div>
+</section>
+
+<section id="shorts">
+  <svg class="d l gold-c hide" style="top:2.5rem;right:8%" aria-hidden="true"><use href="#squig"/></svg>
+  <div class="wrap">
+    <h2>Behind the scenes</h2>
+    <p>Short clips from sets, my studio and the work in progress.</p>
+    <!-- Replace each .ph with a YouTube Short or Instagram embed. -->
+    <div class="row">
+      <article class="card"><div class="ph v hand">Short 1</div></article>
+      <article class="card"><div class="ph v hand">Short 2</div></article>
+      <article class="card"><div class="ph v hand">Short 3</div></article>
+      <article class="card"><div class="ph v hand">Short 4</div></article>
+    </div>
+
+    <h2 style="margin-top:3rem">Updates</h2>
+    <!-- Copy a .post block to add a new update at the top. -->
+    <div class="post"><time>16 Nov 2026</time><h3>The great lock-in begins</h3><p>I’m planning 2027 in public: a Studio Solarii event in June, Masungulo in December, and more of The Clique in between.</p></div>
+    <div class="post"><time>Coming soon</time><h3>Next update</h3><p>Write what you’re working on this week.</p></div>
+  </div>
+</section>
+
+<section id="book" class="dark">
+  <svg class="d gold-c hide" style="top:2rem;right:8%" aria-hidden="true"><use href="#star"/></svg>
+  <div class="wrap">
+    <h2>Book me</h2>
+    <p>Pick what you need and it opens a WhatsApp chat with me. Tell me the date, place and budget and I’ll reply.</p>
+    <div class="opts" id="book-opts"></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <span>© 2026 Koketso Mashele</span>
+  <span><!-- Replace # with your links --><a href="#">Instagram</a> · <a href="#">TikTok</a> · <a href="#">YouTube</a></span>
+</footer>
+
+<script>
+/* ===== EDIT THIS PART ===== */
+// Your WhatsApp number: 27 then your number without the first 0. Example: 27821234567
+const WA = "27XXXXXXXXX";
+
+// img: put an image path like "images/print1.jpg" (leave "" for a placeholder)
+const PIECES = [
+  { name: "A3 print", detail: "Printed on [paper type]. Unframed.", price: "R000", img: "" },
+  { name: "A4 print", detail: "Printed on [paper type]. Unframed.", price: "R000", img: "" },
+  { name: "Sticker pack", detail: "Pack of [number] stickers.", price: "R000", img: "" }
+];
+const MASUNGULO = [
+  { name: "Headscarf", detail: "From the [painting name] painting.", price: "R000", img: "" },
+  { name: "Shirt", detail: "Sizes S to XL.", price: "R000", img: "" },
+  { name: "Puzzle", detail: "[number] pieces.", price: "R000", img: "" }
+];
+const BOOKINGS = ["Directing or production", "Makeup or styling", "Art or collaboration"];
+/* ===== END ===== */
+
+const link = text => "https://wa.me/" + WA + "?text=" + encodeURIComponent(text);
+
+function cards(list, brand, target) {
+  document.getElementById(target).innerHTML = list.map(p =>
+    '<article class="card">' +
+    (p.img ? '<img src="' + p.img + '" alt="' + p.name + '">' : '<div class="ph hand">Add photo</div>') +
+    '<div class="body"><h3>' + p.name + '</h3><p>' + p.detail + '</p><span class="price">' + p.price + '</span>' +
+    '<a class="btn" href="' + link("Hi Koke, I’d like to order: " + p.name + " (" + p.price + ") from " + brand + ".") + '">Buy now</a></div></article>'
+  ).join("");
+}
+cards(PIECES, "7 Pieces", "pieces-grid");
+cards(MASUNGULO, "Masungulo", "mas-grid");
+
+document.getElementById("book-opts").innerHTML = BOOKINGS.map(b =>
+  '<a class="btn" href="' + link("Hi Koke, I’d like to book you for: " + b + ".") + '">' + b + '</a>'
+).join("");
+</script>
+</body>
+</html>
