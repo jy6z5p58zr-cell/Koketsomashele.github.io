@@ -68,7 +68,7 @@ footer{padding:2rem 1.25rem;border-top:2px solid var(--ink);display:flex;flex-wr
   <b>Koketso Mashele</b>
   <a href="#solarii">Studio Solarii</a>
   <a href="#pieces">7 Pieces</a>
-  <a href="#masungulo">Masungulo</a>
+  <!--<a href="#masungulo">Masungulo</a>-->
   <a href="#shorts">Shorts</a>
   <a href="#book">Book</a>
 </nav>
@@ -96,7 +96,7 @@ footer{padding:2rem 1.25rem;border-top:2px solid var(--ink);display:flex;flex-wr
     <p>My creative production house in Johannesburg. Music videos, video treatments, and The Clique, the music interview show I direct and run.</p>
     <div class="grid">
       <!-- Replace each .ph with a video: <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="..." allowfullscreen style="width:100%;aspect-ratio:16/9;border:0"></iframe> -->
-      <article class="card"><div class=" <iframe src="https://youtu.be/W-Ki5HCG5zM?si=biylm2qxmTKA6Fbd" title="..." allowfullscreen style="width:100%;aspect-ratio:16/9;border:0"></iframe></div><div class="body"><h3>The Clique</h3><p>A clip from the show. A sit down with Sastii.</p></div></article>
+      <article class="card"><iframe src="https://www.youtube.com/embed/W-Ki5HCG5zM" title="The Clique: a sit down with Sastii" allowfullscreen style="width:100%;aspect-ratio:16/9;border:0"></iframe><div class="body"><h3>The Clique</h3><p>A clip from the show. A sit down with Sastii.</p></div></article>
       <article class="card"><div class="ph w hand">Snippet 2</div><div class="body"><h3>Music video</h3><p>A clip from a video. Add a one-line description.</p></div></article>
       <article class="card"><img src="IMG_1434.jpeg" alt="A page from a director's treatment"><div class="body"><h3>Treatment</h3><p>A page from a director’s treatment.</p></div></article>
     </div>
@@ -153,7 +153,7 @@ footer{padding:2rem 1.25rem;border-top:2px solid var(--ink);display:flex;flex-wr
 </main>
 
 <footer>
-  <span>© 2026 Koketso Mashele</span>
+  <span>©️ 2026 Koketso Mashele</span>
   <span><!-- Replace # with your links --><a href="#">Instagram</a> · <a href="#">TikTok</a> · <a href="#">YouTube</a></span>
 </footer>
 
@@ -179,7 +179,9 @@ const BOOKINGS = ["Directing or production", "Makeup or styling", "Art or collab
 const link = text => "https://wa.me/" + WA + "?text=" + encodeURIComponent(text);
 
 function cards(list, brand, target) {
-  document.getElementById(target).innerHTML = list.map(p =>
+  const el = document.getElementById(target);
+  if (!el) return; // skips a section you have hidden
+  el.innerHTML = list.map(p =>
     '<article class="card">' +
     (p.img ? '<img src="' + p.img + '" alt="' + p.name + '">' : '<div class="ph hand">Add photo</div>') +
     '<div class="body"><h3>' + p.name + '</h3><p>' + p.detail + '</p><span class="price">' + p.price + '</span>' +
